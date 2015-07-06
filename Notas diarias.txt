@@ -1,0 +1,71 @@
+-----------------------------lunes 22 junio 2015-----------------------------------------------------------
+Ingenieria web
+Es el proceso para crear, implementar y mantener aplicaciones y sistemas web de alta calidad
+
+La efectividad de cualquier proceso de ingenieria depende de:
+ - Su adaptavilidad
+ - La organizacion del equipo de trabajo del proyecto
+ - Los modos de comunicacion entre miembros del equipo
+ - Las acividades de ingenierias y las tareas que deben realizarse
+ - La informacion que se recolecte y se cree
+
+Fases de construccion de una aplicacion web
+ - Incremento del software
+ - Entrega y retroalimentacion
+ - Construccion
+ - Modelado
+ - Planeacion
+ - Comunicacion con el cliente
+
+-----------------------miercoles 24 junio 2015--------------------------------
+
+comandos git
+
+- cd /c  --entrar al disco c
+- cd xampp  --entra ala carpeta xampp
+- cd proyectorepositorio  --entra ala carpeta donde se va crear al proyecto (suponiendo que ya esta la carpeta creada)
+- git config  --global user.name "nombre"         -- es para configurar el usuario
+- git config  --global user.email "abc@gmail.com"  --es para configurar el correo
+- git init  --inicializa el proyecto
+- git add -A  --agrega todos los archivos nuevos
+- git commit -m --"mensaje"  pasa al repositorio
+- git checkout --permite movernos entre versiones del proyecto
+- git log>logs.txt  --guarda los commits en un archivo de texto
+- git checkout + clave del commit ejemplo:
+    git checkout 21e8a3cffc399a4988585c8bc618d6fb38cb8c2d (suponiendo que ya hicimos el git>logs.txt)
+- git clone URL(github)  --para clonar lo que tengo en mi repo local a github
+- git push origin master    --subo lo que tengo en mi repo ala pagina de github
+- git remote -u add origin (nombreRepositorio)
+- git pull origin master  -- UNA VES UVICADO DENTRO DE LA CARPETA DONDE SE HARA GIT PULL EN EL BASH
+                            es para obtener los commits que tu u otros usuarios le hicieron a tu proyecto,
+- git fetch                   ---verifica ver lo que hay que actualizarse
+- git merge origin/master     ---hace la combinacion de lo que hay local y con lo que hay en github
+- git branch "nombre" ---- crea rama (sin las comillas)
+- git branch ---- lista de ramas
+- git checkout "rama" ------ mover entre ramas po(master)
+- git merge rama ------une 2 ramas
+
+
+------------------------------lunes 06 de julio-------------------------------------------------------------------------------------
+
+Proyecto Final en laravel. Ing web
+
+
+   Documentación del proyecto:                           github.com/user/repo
+   ---------------------------                           --------------------
+     1.-Presentación                                     -Documentación
+     2.-Introducción                                     -Evidencias
+     3.-Indice                                        ----App
+     4.-Prefacio                                      |  -Config
+     5.-Requisitos del sistema                        |  -Resources
+           5.1.-funcionales                  Proyecto |  -database
+           5.2.-no funcionales               Laravel  |  -...
+     6.-Arquitectura del sistema                      |  -...
+     7.-Actores y roles                               |
+     8.-Casos de uso
+           8.1.-Diagrama
+           8.2.-Especificación
+     9.-Modelo de objetos
+     10.-Diagramas de secuencia
+     11.-Diagramas de clases
+     12.-Contratos
