@@ -12,10 +12,10 @@ class CreateAltaTable extends Migration
      */
     public function up()
     {
-        Schema::create('alta', function (Blueprint $table) {
+        Schema::create('altas', function (Blueprint $table) {
             $table->increments('id');
             $table->date('fecha');
-            $table->string('id_user');
+            $table->integer('id_usuarios')->references('id')->on('users');
             });
     }
 
@@ -26,6 +26,6 @@ class CreateAltaTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('altas');
     }
 }

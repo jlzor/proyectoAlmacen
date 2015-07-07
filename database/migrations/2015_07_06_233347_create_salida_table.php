@@ -12,10 +12,10 @@ class CreateSalidaTable extends Migration
      */
     public function up()
     {
-        Schema::create('salida', function (Blueprint $table) {
+        Schema::create('salidas', function (Blueprint $table) {
             $table->increments('id');
             $table->date('fecha');
-            $table->string('id_user');
+            $table->integer('id_usuario')->references('id')->on('users');
             });
     }
 
@@ -26,6 +26,6 @@ class CreateSalidaTable extends Migration
      */
     public function down()
     {
-        //
+    Schema::drop('salidas');
     }
 }
