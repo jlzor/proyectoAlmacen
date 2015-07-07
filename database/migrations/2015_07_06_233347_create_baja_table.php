@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSalidaTable extends Migration
+class CreateBajaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateSalidaTable extends Migration
      */
     public function up()
     {
-        Schema::create('salidas', function (Blueprint $table) {
+        Schema::create('bajas', function (Blueprint $table) {
             $table->increments('id');
             $table->date('fecha');
             $table->integer('id_usuario')->references('id')->on('users');
