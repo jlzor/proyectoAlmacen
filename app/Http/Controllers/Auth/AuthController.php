@@ -23,6 +23,8 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
+    //entre comillas la ruta a la que deseas redireccionar
+    protected $redirectTo = '/';
     /**
      * Create a new authentication controller instance.
      *
@@ -57,9 +59,12 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
+            'alias' => $data['alias'],
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'direccion' => $data['direccion'],
+            'telefono' => $data['telefono'],
         ]);
     }
 }
