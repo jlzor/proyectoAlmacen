@@ -12,12 +12,12 @@
                                 {!! Form::email('email', '', ['class'=> 'form-control']) !!}
                             </div>
                             <div class="form-group">
-                                <label>Password</label>
+                                <label>Contraseña</label>
                                 {!! Form::password('password', ['class'=> 'form-control']) !!}
                             </div>
                             <div class="checkbox">
-                                <label><input name="remember" type="checkbox"> Remember me</label>
-                            </div>
+                                <label><input name="remember" type="checkbox"> Recuerdame</label>
+                            </div>  
                             <div>                            
                                 {!! Form::submit('login',['class' => 'btn btn-primary']) !!}
                             </div>

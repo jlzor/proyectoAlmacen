@@ -37,7 +37,7 @@
             <li><a href="{{route('auth/register')}}">Registrar</a></li>
             @else
                     <li>
-                        <a href="#">{{ Auth::user()->name }}</a>
+                        <a href="#">Bienvenido {{ Auth::user()->name }}</a>
                     </li>
                     <li><a href="{{route('auth/logout')}}">Salir</a></li>
                     
