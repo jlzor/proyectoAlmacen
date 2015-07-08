@@ -12,10 +12,10 @@ class CreateProductosBajasTable extends Migration
      */
     public function up()
     {
-        Schema::create('producto_baja', function (Blueprint $table) {
-            $table->increments('id_salida');
-            $table->string('id_baja');
-            $table->string('id_producto');
+        Schema::create('productos_bajas', function (Blueprint $table) {
+            $table->increments('folio');
+            $table->integer('id_salidas')->references('id')->on('salidas');
+            $table->integer('id_productos')->references('id')->on('productos');
             $table->integer('cantidad');
             });
     }
@@ -27,6 +27,6 @@ class CreateProductosBajasTable extends Migration
      */
     public function down()
     {
-        //
+    Schema::drop('productos_bajas');     
     }
 }
