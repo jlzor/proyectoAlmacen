@@ -15,7 +15,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body background="images/fondo.jpg">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
         <div class="navbar-header">
@@ -61,5 +61,9 @@
     @yield('content')
     <!-- Scripts -->
     {!! Html::script('assets/js/bootstrap.min.js') !!}
+    
+    <section>
+      <h1 align="center"><font color="white">Luxos Accesories</font></h1>
+    </section>
 </body>
 </html>
