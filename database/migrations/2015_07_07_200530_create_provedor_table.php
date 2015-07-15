@@ -15,10 +15,13 @@ class CreateProvedorTable extends Migration
         Schema::create('provedores', function(Blueprint $table){
             $table->increments('id');
             $table->string('nombre');
-            $table->string('categoria');
+            $table->integer('id_categoria')->references('categorias')->on('id');
             $table->string('direccion',60);
             $table->integer('telefono');
             $table->string('ciudad');
+            $table->integer('id_usuario')->references('id')->on('users');
+            $table->datetime('created_at');
+            $table->datetime('updated_at');
 
         });
     }

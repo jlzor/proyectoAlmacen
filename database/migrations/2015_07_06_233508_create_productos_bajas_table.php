@@ -13,10 +13,13 @@ class CreateProductosBajasTable extends Migration
     public function up()
     {
         Schema::create('productos_bajas', function (Blueprint $table) {
-            $table->increments('folio');
-            $table->integer('id_salidas')->references('id')->on('salidas');
+            $table->increments('id');
+            $table->integer('id_bajas')->references('id_baja')->on('bajas');
+            $table->integer('id_usuarios')->references('id')->on('users');
             $table->integer('id_productos')->references('id')->on('productos');
             $table->integer('cantidad');
+            $table->datetime('created_at');
+            $table->datetime('updated_at');
             });
     }
 

@@ -14,8 +14,9 @@ class CreateAltaTable extends Migration
     {
         Schema::create('altas', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('fecha');
-            $table->integer('id_usuarios')->references('id')->on('users');
+            $table->integer('id_usuario')->references('id')->on('users');  
+            $table->datetime('created_at');
+            $table->datetime('updated_at');
             });
     }
 

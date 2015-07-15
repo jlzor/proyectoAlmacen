@@ -1,4 +1,4 @@
-@extends('layouts.plane')
+    @extends('layouts.plane')
 
 @section('body')
  <div id="wrapper">
@@ -47,23 +47,48 @@
                         <li {{ (Request::is('*home') ? 'class="active"' : '') }}>
                             <a href="{{ url ('/home') }}"><i class="fa fa-home fa-fw"></i> Escritorio</a>
                         </li>
-                        <li {{ (Request::is('*charts') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('charts') }}"><i class="fa fa-arrow-circle-o-up fa-fw"></i> Dar de Alta</a>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Productos<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ route('Productos/Altas') }}"><i class="fa  fa-arrow-up fa-fw"></i> Dar de Alta</a>
+                                </li>
+                                <li {{ (Request::is('*blank') ? 'class="active"' : '') }}>
+                                    <a href="{{ route('Productos/Bajas') }}"><i class="fa  fa-arrow-down fa-fw"></i> Dar de Baja</a>
+                                </li>
+                            </ul>
+
+                            <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Provedores<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ route('Provedores/Altas') }}"><i class="fa  fa-arrow-up fa-fw"></i> Dar de Alta</a>
+                                </li>
+                                <li {{ (Request::is('*blank') ? 'class="active"' : '') }}>
+                                    <a href="{{ url ('blank') }}"><i class="fa  fa-arrow-down fa-fw"></i> Dar de Baja</a>
+                                </li>
+                            </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                        <li {{ (Request::is('*tables') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('tables') }}"><i class="fa fa-arrow-circle-o-down fa-fw"></i>Dar de Baja</a>
+                        </li>
+                            <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Categorias<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ url('/Categorias/Altas') }}"><i class="fa  fa-arrow-up fa-fw"></i> Dar de Alta</a>
+                                </li>
+                                <li {{ (Request::is('*blank') ? 'class="active"' : '') }}>
+                                    <a href="{{ route('Categorias/Bajas') }}"><i class="fa  fa-arrow-down fa-fw"></i> Dar de Baja</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Generar Reporte<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ url ('login') }}"><i class="fa  fa-arrow-up fa-fw"></i> Historial de Altas</a>
+                                    <a href="{{ route('historialPdf') }}"><i class="fa  fa-arrow-up fa-fw"></i> Historial de Bajas</a>
                                 </li>
-                                <li {{ (Request::is('*blank') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('blank') }}"><i class="fa  fa-arrow-down fa-fw"></i> Historial de Bajas</a>
-                                </li>
-                            </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         

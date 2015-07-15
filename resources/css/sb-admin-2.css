@@ -64,7 +64,7 @@ body {
 .navbar-top-links .dropdown-messages,
 .navbar-top-links .dropdown-tasks,
 .navbar-top-links .dropdown-alerts {
-    width: 310px;
+    width: 280px;
     min-width: 0;
 }
 
@@ -131,7 +131,7 @@ body {
     .sidebar {
         z-index: 1;
         position: absolute;
-        width: 250px;
+        width: 200px;
         margin-top: 51px;
     }
 
