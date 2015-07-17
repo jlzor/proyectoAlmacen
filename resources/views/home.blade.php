@@ -13,7 +13,7 @@
                                     <i class="fa fa-thumbs-o-up fa-4x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
+                                    <div class="huge">1</div>
                                     <div>Productos Entrantes!!</div>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@
                                     <i class="fa fa-thumbs-o-down fa-4x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
+                                    <div class="huge">1</div>
                                     <div>Productos Salientes!!</div>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                                     <i class="fa fa-truck fa-4x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
+                                    <div class="huge">1</div>
                                     <div>Provedores Actuales!!</div>
                                 </div>
                             </div>
@@ -79,8 +79,8 @@
                                     <i class="fa fa-users fa-4x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
-                                    <div>Usuarios Registrados!!</div>
+                                    <div class="huge">1</div>
+                                    <div> Registrados!!</div>
                                 </div>
                             </div>
                         </div>
