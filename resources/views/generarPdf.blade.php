@@ -5,7 +5,8 @@
 	<title>Document</title>
 </head>
 <body>
-<center><h1>INSTITUTO TECNOLOGICO DE CULIACAN</h1></center>
+<center><h1>ALMACEN DE ACCESORIOS LUXOS ACCESORIES</h1>
+		<h2>Culiacan, Sinaloa, Mexico. Col.Centro #1239 pte.</h2><center>
 				<br>
 				<center><h1>Reporte de Bajas del Almacen</h1></center>
 				<table border="1" style="margin:0 auto">

@@ -28,7 +28,10 @@
       <a class="navbar-brand" href="#">Almacen</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-left">
+             @if (!Auth::guest())
+                <li><a href="{{url('home')}}">CP - Admin</a></li>
+            @endif
         </ul>
         <ul class="nav navbar-nav navbar-right">
             @if (Auth::guest())

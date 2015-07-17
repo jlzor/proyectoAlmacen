@@ -1,5 +1,8 @@
 <?php
-
+use App\Alta;
+use App\User;
+use App\Provedor;
+use App\ReporteBajas;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -26,7 +29,8 @@ Route::post('Categorias/Altas', ['middleware' => 'auth', 'as' => 'Categorias/Alt
 Route::get('Categorias/Bajas','homeController@getBajaCategoria');
 Route::post('Categorias/Bajas', ['middleware' => 'auth', 'as' => 'Categorias/Bajas', 'uses' => 'homeController@bajaCategoria']);
 
-
+Route::get('Provedores/Bajas','homeController@getBajaProvedor');
+Route::post('Provedores/Bajas', ['middleware' => 'auth', 'as' => 'Provedores/Bajas', 'uses' => 'homeController@bajaProvedor']);
 Route::get('Provedores/Altas', 'homeController@getProvedor');
 Route::post('Provedores/Altas', ['middleware' => 'auth', 'as' => 'Provedores/Altas', 'uses' => 'homeController@altaProvedor']);
 
@@ -51,6 +55,14 @@ Route::post('auth/register', ['as' => 'auth/register', 'uses' => 'Auth\AuthContr
 
 Route::get('/home', function()
 {
-	return View::make('home');
+		$contadorProductos = Alta::all();
+        $contadorProductos = count($contadorProductos);
+		$contadorUsuarios = User::all();
+        $contadorUsuarios = count($contadorUsuarios);
+		$contadorProvedores = Provedor::all();
+        $contadorProvedores = count($contadorProvedores);
+		$contadorSalidasP = ReporteBajas::all();
+        $contadorSalidasP = count($contadorSalidasP);                        
+	return View::make('home', compact('contadorProductos','contadorProvedores','contadorUsuarios','contadorSalidasP'));
 });
 

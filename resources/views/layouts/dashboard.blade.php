@@ -65,7 +65,7 @@
                                     <a href="{{ route('Provedores/Altas') }}"><i class="fa  fa-arrow-up fa-fw"></i> Dar de Alta</a>
                                 </li>
                                 <li {{ (Request::is('*blank') ? 'class="active"' : '') }}>
-                                    <a href="{{ url ('blank') }}"><i class="fa  fa-arrow-down fa-fw"></i> Dar de Baja</a>
+                                    <a href="{{ route('Provedores/Bajas')}}"><i class="fa  fa-arrow-down fa-fw"></i> Dar de Baja</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

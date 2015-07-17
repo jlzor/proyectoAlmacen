@@ -1,11 +1,11 @@
 @extends('layouts.dashboard')
-@section('page_heading','Dar de Alta - Sistema de Almacen')
+@section('page_heading','Dar de Alta Provedor - Sistema de Almacen')
 @section('section')
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
-                <div class="panel-heading">Registrar Provedores</div>
+                <div class="panel-heading">Registrar Provedor Nuevo</div>
  
                 <div class="panel-body">
                     {!! Form::open(['route' => 'Provedores/Altas', 'class' => 'form']) !!}

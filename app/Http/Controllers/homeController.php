@@ -63,10 +63,11 @@ class homeController extends Controller
         return view('bajasCategoria', compact('categorias'));
     }
 
-    public function BajaCategoria(){
+    public function BajaCategoria(Request $request){
 
        $categorias = Categoria::lists('nombre','id');
-        return view('bajasCategoria', compact('categorias'));
+       Categoria::where('id','=',$request->id)->delete();
+        return view('altasCategoria');
     }
 
 
@@ -148,6 +149,18 @@ class homeController extends Controller
 
     return view('altasProvedor', compact('categorias'));
       
+    }
+
+        public function getBajaProvedor(){
+       $provedores = Provedor::lists('nombre','id');
+        return view('bajasProvedor', compact('provedores'));
+    }
+
+    public function BajaProvedor(Request $request){
+        $categorias = Categoria::lists('nombre','id');
+       $provedores = Provedor::lists('nombre','id');
+       Provedor::where('id','=',$request->id)->delete();
+        return view('altasProvedor',compact('categorias'));
     }
 
 
